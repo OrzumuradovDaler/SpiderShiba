@@ -71,13 +71,15 @@
         count: 0,
         arr: []
     }
+    let g = a
+    let l = b
 let total = arr.filter(item => {
    if(item.completed == false){
   a.arrr.push(item.id)
-    console.log(`${a.arrr} false`)
    }
    else{
 b.arr.push(item.id)
-console.log(`${b.arr} true`)
    }
 })
+console.log(g)
+console.log(l)
