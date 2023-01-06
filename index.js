@@ -59,26 +59,27 @@ let students = [
 let teenagers = []
 let others = []
 
-for(let item of students) {
-    if(item.age < 18) {
-        others.push(item.name)
+// for(let item of students) {
+//     if(item.age < 18) {
+//         teenagers.push(item.name)
      
-    } else {
-        teenagers.push(item.name)
-    }
-}
-console.log(teenagers)
-console.log(others)
-
-
-// for(let i = 0; i <= students.length - 1; i++) {
-//     if(students[i].age < 18) {
-//         others.push(students[i].name)
 //     } else {
-//         teenagers.push(students[i].name)
+//         others.push(item.name)
 //     }
 // }
 // console.log(teenagers)
 // console.log(others)
+
+
+// for(let i = 0; i <= students.length - 1; i++) {
+//     if(students[i].age < 18) {
+//         teenagers.push(students[i].name)
+//     } else {
+//         others.push(students[i].name)
+        
+//     }
+// }
+// console.log(teenagers.sort())
+// console.log(others.sort())
 
 
