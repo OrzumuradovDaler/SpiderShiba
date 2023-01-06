@@ -1,85 +1,84 @@
-    let arr = [
-        {
-            "userId": 1,
-            "id": 1,
-            "title": "delectus aut au`tem",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 3,
-            "title": "fugiat veniam minus",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 4,
-            "title": "et porro tempora",
-  
-            "completed":  true
-        },
-        {
-            "userId": 1,
-            "id": 5,
-            "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 6,
-            "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 7,
-            "title": "illo expedita consequatur quia in",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 8,
-            "title": "quo adipisci enim quam ut ab",
-            "completed": true
-        },
-        {
-            "userId": 1,
-   
-            "id": 9,
-            "title": "molestiae perspiciatis ipsa",
-            "completed": false
-        },
-        {
-            "userId": 1,
-            "id": 10,
-            "title": "illo est ratione doloremque quia maiores aut",
-            "completed": true
-        },
-    ]
-    let a = {
-        count: 0,
-        arrr: []
+let students = [
+    {
+        name: "Shakhboz",
+        age: 18,
+        gender: "m"
+    },
+    {
+        name: "Alexandr",
+        age: 32,
+        gender: "m"
+    },
+    {
+        name: "Daler",
+        age: 15,
+        gender: "m"
+    },
+    {
+        name: "Muzaffar",
+        age: 19,
+        gender: "m"
+    },
+    {
+        name: "Eldor",
+        age: 16,
+        gender: "m"
+    },
+    {
+        name: "Ibragim",
+        age: 14,
+        gender: "w"
+    },
+    {
+        name: "Ravshan",
+        age: 18,
+        gender: "m"
+    },
+    {
+        name: "Timur",
+        age: 19,
+        gender: "w"
+    },
+    {
+        name: "Aziz",
+        age: 15,
+        gender: "w"
+    },
+    {
+        name: "Darya",
+        age: 26,
+        gender: "w"
+    },
+    {
+        name: "Mukhlisa",
+        age: 16,
+        gender: "w"
     }
-   
-    let b = {
-        count: 0,
-        arr: []
+]
+
+let teenagers = []
+let others = []
+
+for(let item of students) {
+    if(item.age < 18) {
+        others.push(item.name)
+     
+    } else {
+        teenagers.push(item.name)
     }
-    let g = a
-    let l = b
-let total = arr.filter(item => {
-   if(item.completed == false){
-  a.arrr.push(item.id)
-   }
-   else{
-b.arr.push(item.id)
-   }
-})
-console.log(g)
-console.log(l)
+}
+console.log(teenagers)
+console.log(others)
+
+
+// for(let i = 0; i <= students.length - 1; i++) {
+//     if(students[i].age < 18) {
+//         others.push(students[i].name)
+//     } else {
+//         teenagers.push(students[i].name)
+//     }
+// }
+// console.log(teenagers)
+// console.log(others)
+
+
