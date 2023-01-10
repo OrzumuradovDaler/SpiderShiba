@@ -1,85 +1,38 @@
-let students = [
-    {
-        name: "Shakhboz",
-        age: 18,
-        gender: "m"
-    },
-    {
-        name: "Alexandr",
-        age: 32,
-        gender: "m"
-    },
-    {
-        name: "Daler",
-        age: 15,
-        gender: "m"
-    },
-    {
-        name: "Muzaffar",
-        age: 19,
-        gender: "m"
-    },
-    {
-        name: "Eldor",
-        age: 16,
-        gender: "m"
-    },
-    {
-        name: "Ibragim",
-        age: 14,
-        gender: "w"
-    },
-    {
-        name: "Ravshan",
-        age: 18,
-        gender: "m"
-    },
-    {
-        name: "Timur",
-        age: 19,
-        gender: "w"
-    },
-    {
-        name: "Aziz",
-        age: 15,
-        gender: "w"
-    },
-    {
-        name: "Darya",
-        age: 26,
-        gender: "w"
-    },
-    {
-        name: "Mukhlisa",
-        age: 16,
-        gender: "w"
-    }
-]
-
-let teenagers = []
-let others = []
-
-// for(let item of students) {
-//     if(item.age < 18) {
-//         teenagers.push(item.name)
-     
-//     } else {
-//         others.push(item.name)
-//     }
-// }
-// console.log(teenagers)
-// console.log(others)
+// Напишите функцию которая заполняет массив нужными данными 
 
 
-// for(let i = 0; i <= students.length - 1; i++) {
-//     if(students[i].age < 18) {
-//         teenagers.push(students[i].name)
-//     } else {
-//         others.push(students[i].name)
-        
-//     }
-// }
-// console.log(teenagers.sort())
-// console.log(others.sort())
+// let arr = ['a', 'a', 'a', 'a' , 'b', 'c', 'c', 'b', 'c']
+// let total = arr.reduce(function(item, index) {
+//     item[index] = (item[index] || 0) + 1
+//     return item
+//   },{})
+//   console.log(total)
 
 
+// compact
+// Убрать все не желательные элементы 
+
+
+// let arr = ['hello', 1, null,  true,2, false,  undefined,3, '', NaN, ]
+// let total = arr.filter(e => e != null && e != 0)
+// console.log(total)
+
+
+// unique
+// Оставить в массиве только оригинал
+
+
+// let arr = ['a', 'b', true, 'a', false, 'b', true]
+// let unique = Array.from(new Set(arr))
+// console.log(unique)
+
+
+// Проверить массив на схожесть
+
+// let arr = [1,2,3,4,5]
+// let arr2 = [1,2,3,4,5,]
+
+
+// arr.filter((item, i) =>{
+// console.log(arr[item[i]] == arr2[item[i]])
+// })
