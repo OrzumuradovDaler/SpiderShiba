@@ -1,38 +1,37 @@
-// Напишите функцию которая заполняет массив нужными данными 
+
+// let emailname = prompt('Whats your name and surname')
 
 
-// let arr = ['a', 'a', 'a', 'a' , 'b', 'c', 'c', 'b', 'c']
-// let total = arr.reduce(function(item, index) {
-//     item[index] = (item[index] || 0) + 1
-//     return item
-//   },{})
-//   console.log(total)
 
+//  const generatedEmail = (l) => {
+    
+   
+  
+//     function generate() {
+//       for(let i = 0; i <= l; i++) {
+//         let chars = "0123456789"
+//         let rnd = Math.floor(Math.random() * chars.length) 
+//         let rndChar = chars[rnd]
+        
+//         console.log(`Maybe you can choose this email: ${emailname += rndChar + Math.floor(Math.random() * chars.length)  + Math.floor(Math.random() * chars.length)} `)
+//       }
+//     }
+//     generate()
+  
+   
+  
+//     return emailname
+    
+//   }
+  
+// generatedEmail(0)
 
-// compact
-// Убрать все не желательные элементы 
+let rnd = +prompt("Only number!!!")
 
-
-// let arr = ['hello', 1, null,  true,2, false,  undefined,3, '', NaN, ]
-// let total = arr.filter(e => e != null && e != 0)
-// console.log(total)
-
-
-// unique
-// Оставить в массиве только оригинал
-
-
-// let arr = ['a', 'b', true, 'a', false, 'b', true]
-// let unique = Array.from(new Set(arr))
-// console.log(unique)
-
-
-// Проверить массив на схожесть
-
-// let arr = [1,2,3,4,5]
-// let arr2 = [1,2,3,4,5,]
-
-
-// arr.filter((item, i) =>{
-// console.log(arr[item[i]] == arr2[item[i]])
-// })
+if(rnd <= 0){
+    console.log(false)
+    
+}
+else if(rnd => 0){
+    console.log(true)
+}
