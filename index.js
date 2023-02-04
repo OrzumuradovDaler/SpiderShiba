@@ -1,37 +1,19 @@
+let plus = document.querySelector('.plus')
+let minus = document.querySelector('.minus')
+let counter = document.querySelector('.counter')
+let rnd = document.querySelector('.rnd')
+let reset = document.querySelector('.reset')
+counter.innerHTML = 0 
 
-// let emailname = prompt('Whats your name and surname')
-
-
-
-//  const generatedEmail = (l) => {
-    
-   
-  
-//     function generate() {
-//       for(let i = 0; i <= l; i++) {
-//         let chars = "0123456789"
-//         let rnd = Math.floor(Math.random() * chars.length) 
-//         let rndChar = chars[rnd]
-        
-//         console.log(`Maybe you can choose this email: ${emailname += rndChar + Math.floor(Math.random() * chars.length)  + Math.floor(Math.random() * chars.length)} `)
-//       }
-//     }
-//     generate()
-  
-   
-  
-//     return emailname
-    
-//   }
-  
-// generatedEmail(0)
-
-let rnd = +prompt("Only number!!!")
-
-if(rnd <= 0){
-    console.log(false)
-    
+plus.onclick = () => {
+    counter.innerHTML++ 
 }
-else if(rnd => 0){
-    console.log(true)
+minus.onclick = () => {
+    counter.innerHTML--
+}
+rnd.onclick = () => {
+    counter.innerHTML =  Math.floor(Math.random() * 100 )
+}
+reset.onclick = () => {
+    counter.innerHTML =  0
 }
