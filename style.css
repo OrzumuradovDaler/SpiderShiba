@@ -1,42 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
- 
+body{
+    position: relative;
+}
+/* header */
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+.header{
+    max-width: 100%;
+    height: 48px;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.linkblock{
+    max-width: 998px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.linkblock a{
+    text-decoration: none;
+    color: #D7D7D7;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+.linkblock a:hover{
+    scale: 1.25;
+    color: #ff7b00;}
+.info{
+    max-width: 1441px;
+    height: 119px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
 
-.box{
-    margin: 20% auto;
-    width: 300px;
-    height: 300px;
+}
+.infoleft span{
+    color: #BF4800;
+}
+.infoleft h1{
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 500;
+    letter-spacing: -.003em;
+    color: #1d1d1f;
+    padding-bottom: 8px;
+    margin-top: -5px;
+}
+.infoleft p{
+    font-size: 14px;
+    line-height: 1.42859;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    color: #1d1d1f;
+    margin-top: 10px;
+}
+.inforight{
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 70px;
+}
+.irtop{
+    padding: 5px 10px;
+    border-radius: 100px;
+    background-color: #F5F5F7;
+    transition: 0.3s ease;
+}
+.irbottom{
+    padding: 5px 10px;
+    border-radius: 100px;
+    background-color: #F5F5F7;
+    transition: 0.3s ease;
+}
+.irbottom:hover{
+    scale: 1.15;
+    background-color: #e9e9e9;
+    color: #ff5e00;
+}
+.irtop:hover{
+    scale: 1.15;
+    background-color: #e9e9e9;
+    color: #ff6200;
+}
+.main{
+    max-width: 1400px;
+    height: 2000px;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
-.plus{
-    height: 25%;
-    width: 100%;
-    background-color: green;
+.mleft{
+    width: 817px;
+    height: 100%;
+    position: relative;
 }
-.minus{
-    height: 25%;
-    width: 100%;
-    background-color: red;
+.mright{
+width: 300px;
+height: 100%;
 }
-.rnd{
+.stickypanel{
+    width: 817px;
+    height: 460px;
+    border-radius: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 100px;
+    background-image: url(./apple_img/317757_apple_macintosh_steve\ jobs_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.btns{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
 
-    background-color: aqua;
+.btnfirst{
+  color: #00000000;
+  border: #00000000;
 }
-.counter{
-    font-size: 100px;
+.btnsecond{
+    color: #00000000;
+    border: #00000000;
 }
-.reset{
+.btnfirstobject{
+    background-color: #00000000;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: wheat;
-    background-color: black;
+    border-radius: 100%;
+    border: none;
+    background-image: url(./apple_img/left.png);
+    background-position: center;
+
 }
+.btnsecondobject{
+    background-color: #00000000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: none;
+    background-image: url(./apple_img/right.png);
+    background-position: center;
+}
+.dots{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.dot1{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #CDCDCF;
+}
+.dot2{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #CDCDCF;
+}
+.dot3{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #CDCDCF;
+}
+.dot1check{
+    background-color: #6C6C6D;
+}
+.dot2check{
+    background-color: #6C6C6D;
+}
+.dot3check{
+    background-color: #6C6C6D;
+}
+.mright{
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.defaultblock{
+    width: 328px;
+    height: 99px;
+    border-radius: 10px;
+    border: solid 1px gray;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.4s ease;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#none_border{
+    border: none;
+    background-color: #CDCDCF;
+}
+#none_border2{
+    border: none;
+    background-color: #CDCDCF;
+}
+.cena{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 12px;
+}
+.defaultblock:hover{
+    scale: 1.15;
+    background-color: #e9e9e9;
+    color: #ff6200;
+    border: none;
+}
+.defaultblock2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.color1{
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+.color1:hover{
+    scale: 1.2;
+}
+.color2{
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+.color2:hover{
+    scale: 1.2;
+}
+.color3{
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+.color3:hover{
+    scale: 1.2;
+}
+.color4{
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+.color4:hover{
+    scale: 1.2;
+}
+.spaceblackfirst{
+    background-image: url(./apple_img/space_black_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.goldfirst{
+    background-image: url(./apple_img/gold_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.silverfirst{
+    background-image: url(./apple_img/silver_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.deeppurple{
+    background-image: url(./apple_img/deep_purple_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.spaceblackfirst{
+    background-image: url(./apple_img/space_black_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.goldfirst{
+    background-image: url(./apple_img/gold_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.silverfirst{
+    background-image: url(./apple_img/silver_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.deeppurple{
+    background-image: url(./apple_img/deep_purple_first.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.spaceblacksecond{
+    background-image: url(./apple_img/space_black_second.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.goldsecond{
+    background-image: url(./apple_img/gold_second.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.silversecond{
+    background-image: url(./apple_img/silver_second.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.deeppurplesecond{
+    background-image: url(./apple_img/deep_purple_second.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.spaceblackthird{
+    background-image: url(./apple_img/space_black_third.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.goldthird{
+    background-image: url(./apple_img/gold_third.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.silverthird{
+    background-image: url(./apple_img/silver_third.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.deeppurplethird{
+    background-image: url(./apple_img/deep_purple_third.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.modal{
+    display: none;
+}
+.modalokno{
+    display: block;
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 100px;
+    background: url(./apple_img/silver_first.jpg); 
+    background-position: center;
+    background-size: cover;
+}
+
+
+
