@@ -30,7 +30,17 @@ form.onsubmit = (event) => {
 
 
     if(error > 0) {
-        alert('error')
+                animation.classList.add('lds-dual-ringA') 
+         setTimeout(item =>{ 
+  
+                 animation.classList.remove('lds-dual-ringA') 
+               
+             setTimeout(item=>{ 
+                 submit() 
+                 alert('error') 
+             },10) 
+  
+         },2000)
     } else { 
         animation.classList.add('lds-dual-ringA')
         setTimeout(item =>{
