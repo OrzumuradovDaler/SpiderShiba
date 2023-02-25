@@ -1,162 +1,134 @@
-* {
+*{
+    background-color: rebeccapurple;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    transition: 1s ease;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 50px auto;
-}
-
-/* title */
-.title {
-    margin-bottom: 60px;
-}
-
-.title h1 {
-    font-size: 46px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.title nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.title nav span {
-    font-size: 14px;
-}
-
-/* title */
-
-/* form */
-.inputs-collection {
-    display: flex;
-    gap: 55px;
-    justify-content: center;
-    align-items: center;
-}
-
-.inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.inputs label {
+.lds-heart {
+    display: inline-block;
     position: relative;
-}
-
-.inputs label.required span:first-child {
-    color: #4200FF;
-}
-
-.inputs label :first-child {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-}
-
-.inputs label .important {
-    position: absolute;
-    font-size: 11px;
-    left: 0;
-    bottom: -15px;
-    color: #595959;
-}
-
-.inputs input {
-    padding: 20px 12px;
-    width: 277px;
-    border: 2px solid #949494;
-    border-radius: 4px;
-    outline: none;
-    font-style: 16px;
-}
-
-.inputs label.required input {
-    border-color: #4200FF;
-}
-
-img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    z-index: -1;
-    transition: all ease .8s;
-}
-
-form button {
-    background-color: #4200FF;
-    color: white;
-    font-size: 14px;
-    width: 277px;
-    border: none;
-    border-radius: 4px;
-    padding: 20px 12px;
-    margin-top: 20px;
-}
-
-/* form */
-
-/* additive-classes */
-
-.input-focus {
-    border-color: limegreen !important;
-}
-
-.input-name-active {
-    color: limegreen !important;
-}
-
-.important-active {
-    color: limegreen !important;
-}
-
-
-.invalid span {
-    color: red !important;
-}
-
-.invalid img {
-    right: -24px;
-}
-
-.invalid input {
-    border-color: red !important;
-}
-.lds-dual-ring{
-    display: none;
     width: 80px;
     height: 80px;
+    scroll-behavior: smooth;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
+    top: 300px;
+    transition: 1s ease;
+    left: 1px;
   }
-  .lds-dual-ringA{
-    z-index: 9999999;
-    top: 50%;
-    height: 50%;
-    position: fixed;
+  .lds-heart div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    animation: lds-heart 0.9s 1;
+  }
+  .lds-heart div:after,
+  .lds-heart div:before {
     content: " ";
+    position: absolute;
     display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #090de2;
-    border-color: #090de2 transparent #090de2 transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
+    width: 32px;
+    height: 32px;
   }
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  .lds-heart div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+  }
+  .lds-heart div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
   }
 
-  
+  .lds-heart1 {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    scroll-behavior: smooth;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
+    top: 300px;
+    transition: 1s ease;
+    left: 1px;
+  }
+  .lds-heart1 div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+
+    background-color: red;
+    animation: lds-heart 0.9s 1;
+  }
+  .lds-heart1 div:after,
+  .lds-heart1 div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  .lds-heart1 div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+  }
+  .lds-heart1 div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
+  }
+  .lds-heart2 {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    scroll-behavior: smooth;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
+    top: 300px;
+
+    left: 1px;
+  }
+  .lds-heart2 div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    animation: lds-heart 0.9s 1;
+    
+  }
+  .lds-heart2 div:after,
+  .lds-heart2 div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  .lds-heart2 div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+  }
+  .lds-heart2 div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
+  }
+@keyframes lds-heart{
+    
+      
+      0%{
+        background-color: black;
+      }
+    100%{
+      
+      background: red;
+    }
+  }
