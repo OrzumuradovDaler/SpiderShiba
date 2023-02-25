@@ -39,3 +39,19 @@ setTimeout(() => {
 
 }
 )
+// let hearts = document.querySelectorAll('.lds-heart')
+
+// hearts.forEach(heart =>{
+
+//     setInterval(item => {
+//         if (heart.style.right >= '700px'){
+//             clearInterval(timer);
+//         } 
+//         else {
+//             heart.style.left +='750px'
+//         }
+//       }, 200); 
+   
+    
+
+// })
