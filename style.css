@@ -1,134 +1,131 @@
 *{
-    background-color: rebeccapurple;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: 1s ease;
 }
+a{
+  text-decoration: none;
+}
+.container{
+  margin: 0 auto;
+  width: 1366px;
+  height: 100vh;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+.main_top{
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(161, 160, 160);
+  
+}
+.main_top a {
+  color: rgb(32, 32, 32);
+}
+.search_punkt{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(118,121,127,0.3);
+  background-color: #fff;
+  vertical-align: top;
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 8%);
+  width: 100%;
+  padding: 0 10px;
+  transition: box-shadow .2s ease;
+  border-radius: 4px;
+}
+.imager{
+  display: flex;
+  width: 10px;
+  justify-content: flex-end;
 
-.lds-heart {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    scroll-behavior: smooth;
-    transform: rotate(45deg);
-    transform-origin: 40px 40px;
-    top: 300px;
-    transition: 1s ease;
-    left: 1px;
-  }
-  .lds-heart div {
-    top: 32px;
-    left: 32px;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background-color: red;
-    animation: lds-heart 0.9s 1;
-  }
-  .lds-heart div:after,
-  .lds-heart div:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 32px;
-    height: 32px;
-  }
-  .lds-heart div:before {
-    left: -24px;
-    border-radius: 50% 0 0 50%;
-  }
-  .lds-heart div:after {
-    top: -24px;
-    border-radius: 50% 50% 0 0;
-  }
+}
+.main_searcher{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px;
 
-  .lds-heart1 {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    scroll-behavior: smooth;
-    transform: rotate(45deg);
-    transform-origin: 40px 40px;
-    top: 300px;
-    transition: 1s ease;
-    left: 1px;
-  }
-  .lds-heart1 div {
-    top: 32px;
-    left: 32px;
-    position: absolute;
-    width: 32px;
-    height: 32px;
+}
+.search_punkt input{
+  display: block;
+  height: 40px;
+  width: 100%;
+  outline: none;
+  margin: 0;
 
-    background-color: red;
-    animation: lds-heart 0.9s 1;
-  }
-  .lds-heart1 div:after,
-  .lds-heart1 div:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 32px;
-    height: 32px;
-  }
-  .lds-heart1 div:before {
-    left: -24px;
-    border-radius: 50% 0 0 50%;
-  }
-  .lds-heart1 div:after {
-    top: -24px;
-    border-radius: 50% 50% 0 0;
-  }
-  .lds-heart2 {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    scroll-behavior: smooth;
-    transform: rotate(45deg);
-    transform-origin: 40px 40px;
-    top: 300px;
+  font-weight: 400;
+  font-size: .875rem;
+  font-family: Inter,sans-serif;
+  border: none;
+}
+.searcher_block{
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  transition: all .2s;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+}
+.main_navigation{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 
-    left: 1px;
-  }
-  .lds-heart2 div {
-    top: 32px;
-    left: 32px;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background-color: red;
-    animation: lds-heart 0.9s 1;
-    
-  }
-  .lds-heart2 div:after,
-  .lds-heart2 div:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 32px;
-    height: 32px;
-  }
-  .lds-heart2 div:before {
-    left: -24px;
-    border-radius: 50% 0 0 50%;
-  }
-  .lds-heart2 div:after {
-    top: -24px;
-    border-radius: 50% 50% 0 0;
-  }
-@keyframes lds-heart{
-    
-      
-      0%{
-        background-color: black;
-      }
-    100%{
-      
-      background: red;
-    }
-  }
+}
+.main_navigation a{
+  font-size: 0.875rem;
+  margin-bottom: -1px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+.DOMEFFECT{
+  margin-top: 500px;
+}
+.item_grid{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-gap: 30px;
+}
+.item{
+height: 500px;
+background-color: rgb(189, 159, 159);
+width: 230px;
+}
+.itemp{
+  text-align: center;
+  margin: 4px;
+}
+.spaan{
+  display: block;
+            width: fit-content; font-size: 10px; height: fit-content; padding: 2px; margin: 4px; background-color: orange; 
+}
+.spaaan{
+  display: block;
+  margin: 40px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.image{
+  size: cover; 
+   width : 230px;
+   height: 340px;
+}
