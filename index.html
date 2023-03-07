@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>JS DOM</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p class="title">В корзине: <span id="total">0</span> товаров</p>
+        <nav class="nav_show_more">
+            <p class="show_first_five">Показать первые 5</p>
+            <p class="show_all">Показать все</p>
+            <p class="only_womans">Только женская одежда</p>
+            <p class="cart_menu_btn">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </p>
+        </nav>
+
+        <div class="products grid"></div>
+
+    </div>
+
+    <div class="cart_menu_wrapper">
+        <div data-menu_close class="cart_menu_close_area"><p>Click here to close the cart menu</p></div>
+        <div class="cart_menu">
+
+            <div class="empty_cart_sign">
+                <p class="txt">For the time being, your cart is empty</p>
+                <img src="./images/cart.png" alt="">
+            </div>
+
+            <!-- <div class="cart_product">
+                <div class="cart_product_left">
+                    <img src="./images/cart.png" alt="">
+                    <p class="cart_product_name">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="cart_product_right">
+                    <div class="counter">
+                        <span class="plus">+</span>
+                        <span class="counter_num">0</span>
+                        <span class="minus">-</span>
+                    </div>
+                    <div class="cart_product_price">12 000 <span class="material-symbols-outlined">attach_money</span></div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
