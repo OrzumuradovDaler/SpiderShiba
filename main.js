@@ -7,7 +7,7 @@ let arr = [{
     "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     "rating": {
         "rate": 3.9,
-        "count": 120
+        "count": 12
     }
 }, {
     "id": 2,
@@ -226,7 +226,9 @@ let show_first_five = document.querySelector('.show_first_five')
 let show_all = document.querySelector('.show_all')
 let only_womans = document.querySelector('.only_womans')
 let total = document.querySelector('#total')
-let cart_menu = document.querySelector('.cart_menu')
+let cart_place = document.querySelector('.wrapper')
+let totalView = document.querySelector('.total')
+
 
 
 function reload(data, place) {
@@ -264,6 +266,10 @@ function reload(data, place) {
         count_span_box.classList.add('material-symbols-outlined')
         btn_favorite.classList.add('favorite')
 
+        if (cart.includes(item.id)) {
+            btn_favorite.classList.add('fav_act')
+        }
+
         img.src = item.image
         img.alt = 'image'
 
@@ -300,15 +306,16 @@ function reload(data, place) {
             if (cart.includes(item.id)) {
                 btn_favorite.classList.remove('fav_act')
                 cart = cart.filter(el => el !== item.id)
-                cartReload(cart, arr, cart_menu)
             } else {
-                cart.push(item.id)
                 btn_favorite.classList.add('fav_act')
-                cartReload(cart, arr, cart_menu)
+                item.quantity = 1
+                cart.push(item.id)
             }
-            total.innerHTML = cart.length
 
+            cart_reaload(cart, cart_place)
+            total.innerHTML = cart.length
         }
+
     }
 }
 
@@ -330,101 +337,97 @@ only_womans.onclick = () => {
     reload(filtered, products)
 }
 
-reload(arr, products)
 
-
-
-let cart_menu_wrapper = document.querySelector('.cart_menu_wrapper')
-let cart_menu_btn = document.querySelector('.cart_menu_btn')
-let cart_menu_close_btns = document.querySelectorAll('[data-menu_close]')
-let empty_cart_sign = document.querySelector('.empty_cart_sign')
-
-cart_menu_btn.onclick = () => {
-    cart_menu_wrapper.classList.add('cart_menu_act')
-    document.body.style.overflow = 'hidden'
-}
-
-cart_menu_close_btns.forEach(el => {
-    el.onclick = () => {
-        cart_menu_wrapper.classList.remove('cart_menu_act')
-        document.body.style.overflow = null
-    }
-})
-
-function cartReload(cart, arr, place) {
-    place.innerHTML = ''
-
-    if (cart.length === 0) {
-        empty_cart_sign.style.display = 'block'
-    } else {
-        empty_cart_sign.style.display = 'none'
+function cart_reaload(data, place) {
+    place.innerHTML = ""
+    let totalPrice = 0
+    totalView.innerHTML = `${totalPrice.toFixed(2)} $`
+    function reduceTotal(item) {
+        totalPrice += item.price * item.quantity
+        totalView.innerHTML = `${totalPrice.toFixed(2)} $`
     }
 
-    for (let item of cart) {
-        for (let item2 of arr) {
-            if (item === item2.id) {
-                let cart_product = document.createElement('div')
-                let cart_product_left = document.createElement('div')
-                let cart_product_left_img = document.createElement('img')
-                let cart_product_left_name = document.createElement('p')
-                let cart_product_right = document.createElement('div')
+    for (let id of data) {
+        for (let item of arr) {
+            if (item.id === id) {
+                let cart_item = document.createElement('div')
+                let left = document.createElement('div')
+                let right = document.createElement('div')
+                let img = document.createElement('img')
+                let descr = document.createElement('div')
+                let h3 = document.createElement('h3')
+                let title = document.createElement('span')
                 let counter = document.createElement('div')
-                let counter_plus = document.createElement('span')
-                let counter_num = document.createElement('span')
-                let counter_minus = document.createElement('span')
-                let cart_product_price = document.createElement('div')
-                let span_$ = document.createElement('span')
+                let btnPlus = document.createElement('button')
+                let btnMinus = document.createElement('button')
+                let count_span = document.createElement('span')
+                let p = document.createElement('p')
+                let span_price = document.createElement('span')
 
-                cart_product.classList.add('cart_product')
-                cart_product_left.classList.add('cart_product_left')
-                cart_product_left_name.classList.add('cart_product_name')
-                cart_product_right.classList.add('cart_product_right')
+                cart_item.classList.add('cart-item')
+                left.classList.add('left')
+                right.classList.add('right')
+                descr.classList.add('descr')
                 counter.classList.add('counter')
-                counter_plus.classList.add('plus')
-                counter_num.classList.add('counter_num')
-                counter_minus.classList.add('minus')
-                cart_product_price.classList.add('cart_product_price')
-                span_$.classList.add('material-symbols-outlined')
+                count_span.classList.add('count-span')
+                span_price.classList.add('price')
 
-                cart_product_left_img.src = item2.image
-                cart_product_left_name.innerHTML = item2.title
-                counter_plus.innerHTML = '+'
-                counter_minus.innerHTML = '-'
+                img.src = item.image
+                img.alt = item.title
 
-                // Counter
-                let counterNum = 1
-                counter_num.innerHTML = counterNum
-                counter_plus.onclick = () => {
-                    counterNum++
-                    counter_num.innerHTML = counterNum
-                    cart_product_price.innerHTML = item2.price * counterNum + `  $`
-                }
-                counter_minus.onclick = () => {
-                    counterNum--
-                    counter_num.innerHTML = counterNum
-                    cart_product_price.innerHTML = item2.price * counterNum + `  $`
-                    if (counterNum === 0) {
-                        cart = cart.filter(el => el !== item2.id)
-                        cartReload(cart, arr, cart_menu)
+                h3.innerHTML = item.title
+                h3.innerHTML = item.category
+                span_price.innerHTML = item.price
+                btnPlus.innerHTML = "+"
+                btnMinus.innerHTML = "-"
+                count_span.innerHTML = item.quantity
+                p.innerHTML = "$"
+
+                cart_item.append(left, right)
+                left.append(img, descr)
+                descr.append(h3, title)
+                right.append(counter, p)
+                counter.append(btnPlus, count_span, btnMinus)
+                p.append(span_price)
+                place.append(cart_item)
+
+                btnPlus.onclick = () => {
+                    if(item.quantity < item.rating.count) {
+                        item.quantity++
+                        
+                        span_price.innerHTML = (item.price * item.quantity).toFixed(2)
+                        count_span.innerHTML = item.quantity
+                        totalPrice += item.price
+                        totalView.innerHTML = `${totalPrice.toFixed(2)} $`
                     }
                 }
-                // Counter
+                btnMinus.onclick = () => {
 
-                span_$.innerHTML = 'attach_money'
-                cart_product_price.innerHTML = item2.price * counterNum + `  $`
+                    if(item.quantity > 0) {
+                        item.quantity--
+    
+                        span_price.innerHTML = (item.price * item.quantity).toFixed(2)
+                        count_span.innerHTML = item.quantity
+                    } else {
+                        
+                            totalPrice = 0
+                            return
+                        
+                    }
+                    totalPrice -= item.price
+                    totalView.innerHTML = `${totalPrice.toFixed(2)} $`
+                }
 
-                place.append(cart_product)
-                cart_product.append(cart_product_left)
-                cart_product.append(cart_product_right)
-                cart_product_left.append(cart_product_left_img)
-                cart_product_left.append(cart_product_left_name)
-                cart_product_right.append(counter)
-                counter.append(counter_minus)
-                counter.append(counter_num)
-                counter.append(counter_plus)
-                cart_product_right.append(cart_product_price)
-                cart_product_price.append(span_$)
+
+                reduceTotal(item)
             }
         }
     }
+
 }
+
+cart_reaload(cart, cart_place)
+reload(arr, products)
+
+let tuman = document.querySelector('tuman')
+
