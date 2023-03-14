@@ -69,7 +69,7 @@ function reload(arr) {
             todoBox.remove()
         }
         h2.onclick = () => {
-            h2.classList.add('cancel')
+            h2.classList.toggle('cancel')
         }
 
     }
