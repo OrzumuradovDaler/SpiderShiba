@@ -1,5 +1,5 @@
 let cont = document.querySelector('.container')
-let form  = document.forms.creater
+let form = document.forms.creater
 let todos = [
     {
         id: 1,
@@ -33,14 +33,14 @@ form.onsubmit = (e) => {
     })
 
     todos.push(todo);
-    reload(todos) 
+    reload(todos)
 }
 
 
 function reload(arr) {
     cont.innerHTML = ""
 
-    for(let item of arr) {
+    for (let item of arr) {
         let todoBox = document.createElement('div')
         let left = document.createElement('div')
         let right = document.createElement('div')
@@ -64,12 +64,23 @@ function reload(arr) {
         cont.append(todoBox)
 
         cancelBtn.onclick = () => {
+            let key = item.id
+            arr.splice(arr.findIndex(el => el.id === key), 1)
             todoBox.remove()
         }
         h2.onclick = () => {
-            h2.classList.toggle('cancel')
-        }        
+            if(item.completed === true){
+                item.completed === false
+                h2.style = 'text-decoration: none;'
+            }else{
+                item.completed === true
+
+                h2.style = 'text-decoration: line-through 2px red;'
+            }
+        }
 
     }
 }
 reload(todos) 
+
+
