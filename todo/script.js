@@ -69,14 +69,7 @@ function reload(arr) {
             todoBox.remove()
         }
         h2.onclick = () => {
-            if(item.completed === true){
-                item.completed === false
-                h2.style = 'text-decoration: none;'
-            }else{
-                item.completed === true
-
-                h2.style = 'text-decoration: line-through 2px red;'
-            }
+            h2.classList.add('cancel')
         }
 
     }
