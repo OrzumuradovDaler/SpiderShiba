@@ -52,7 +52,7 @@ function reload (arr) {
             deleteBtn.src = './img/delete_icon.svg'
 
             deleteBtn.setAttribute('data-', item.id);
-            editBtn.setAttribute('data-id', item.id);
+            editBtn.setAttribute('data-', item.id);
 
 
         fullName.innerHTML = `${item.firstName} ${item.lastName}`
@@ -107,8 +107,8 @@ function deleteItem() {
   deleteItem()
 
   function editItem() {
-    let id = this.getAttribute('data-id');
-    let fullName = prompt('Enter new full name:');
+    let id = this.getAttribute('data-');
+    let fullName = prompt('Исправить имя:');
     let [firstName, lastName] = fullName.split(' ');
     fetch(`${BASE_URL}/${id}`, {
       method: 'PUT',
