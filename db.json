@@ -1,0 +1,255 @@
+{
+  "users": [
+    {
+      "email": "bilial.shavkatov12@hotmail.com",
+      "name": "REDFOX",
+      "surname": "Adams",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "smuradova14@hotmail.com",
+      "name": "Tanya",
+      "surname": "Arakelova",
+      "password": "5555",
+      "id": 2
+    },
+    {
+      "email": "shax@gmail.com",
+      "name": "Shaxzod",
+      "surname": "Adams",
+      "password": "7777",
+      "id": 3
+    },
+    {
+      "email": "muzaffar@gmail.com",
+      "name": "muzik",
+      "surname": "adams",
+      "password": "9999",
+      "id": 4
+    }
+  ],
+  "cards": [
+    {
+      "id": 2630918763,
+      "user_id": 3,
+      "name": "humo",
+      "total": 30000,
+      "currency": "USD"
+    },
+    {
+      "id": 31232164,
+      "user_id": 4,
+      "name": "visa",
+      "total": 150,
+      "currency": "BTC"
+    },
+    {
+      "id": 0.0018140259601411302,
+      "user_id": 3,
+      "name": "mastercard",
+      "total": "10",
+      "currency": "AFN"
+    },
+    {
+      "id": 0.03756611027038925,
+      "user_id": 3,
+      "name": "REDFOX",
+      "total": "10",
+      "currency": "AOA"
+    },
+    {
+      "id": 0.4291799815664108,
+      "user_id": 2,
+      "name": "3dsmax",
+      "total": "70000",
+      "currency": "USD"
+    },
+    {
+      "id": 0.3377956855270481,
+      "user_id": 1,
+      "name": "visa",
+      "total": "1000",
+      "currency": "UZS"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 0.6578472240245363,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": "1000",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.1723671430421172,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": 999,
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.2280152746803501,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": 998,
+        "currency": "UZS"
+      },
+      "total": "2",
+      "category": ""
+    },
+    {
+      "id": 0.8540620734634925,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": 999,
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.8329234470804929,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": 999,
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.6394027645897313,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": 998,
+        "currency": "UZS"
+      },
+      "total": "2",
+      "category": "1"
+    },
+    {
+      "id": 0.43636384898632197,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": 999,
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.5632105759230597,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": "1000",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.29418281590758877,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "total": "1000",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.05016149743242404,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.7764088646553049,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.5663970065041528,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.33707291956945773,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    },
+    {
+      "id": 0.6175016169238281,
+      "user_id": 1,
+      "date": "2023-4-13",
+      "card": {
+        "id": 0.3377956855270481,
+        "name": "visa",
+        "currency": "UZS"
+      },
+      "total": "1",
+      "category": "2"
+    }
+  ]
+}
