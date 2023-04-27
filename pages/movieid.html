@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.scss">
+    <link rel="stylesheet" href="/scss/header.scss">
+    <title>Document</title>
+    <style>
+        .movie_about_page{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 100px 20px;
+        }
+        .movie_backdrop_path{
+            width: 504px;
+            height: 659px;
+            border-radius: 3px;
+        }
+        .map_right_side{
+            width: 40%;
+            margin-right: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            justify-content: space-between;
+            padding: 20px 0;
+            padding-bottom: 50px;
+        }
+        .mrs_title{
+            color: white;
+            font-size: 30px;
+        }
+        .mrs_name{
+            color: white;
+            font-size: 20px;
+        }
+        .mrs_about{
+            color: white;
+            font-size: 16px;
+        }
+        .mrs_w_trailer{
+            all: unset;
+            background-color: transparent;
+            border: 3px white solid;
+            border-radius: 12px;
+            width: 260px;
+            height: 71px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .movie_info_block{
+            width: 78%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mib_left_side{
+            width: 50%;
+            height: 100%;
+        }
+        .mib_right_side{
+            width: 50%;
+            height: 100%;
+        }
+        .mls_left_side{
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .mrs_left_side{
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        span{
+            text-decoration: underline;
+            color: rgb(255, 196, 0);
+        }
+        .ppimg{
+            width: 300px;
+            height: 300px;
+        }
+        .actors{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header></header>
+    <main>
+        <h1 style="color: white; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">Трейлер фильма</h1>
+        <iframe width="100%" style="border-radius: 10px; border: transparent;" height="920" src="https://www.youtube.com/embed/aeBsl8feQao?list=RDaeBsl8feQao"></iframe>
+         <div class="movie_about_page">
+             <div class="map_left_side">
+                 <img  class="movie_backdrop_path" src="" alt="">
+             </div>
+             <div class="map_right_side">
+                <h2 class="mrs_title"></h2>
+                <h3 class="mrs_name"></h3>
+                <p class="mrs_about"></p>
+                <button class="mrs_w_trailer">Смотреть трейлер</button>
+             </div>
+         </div>
+         <div class="movie_info_block">
+            <div class="mib_left_side">
+                <div class="mls_left_side">
+                    <p>Год: <span class="year"></span></p>
+                    <p>Страна: <span class="country"></span></p>
+                    <p>Слоган: <span class="slogan"></span></p>
+                    <p>Режиссер: <span class="rejisser"></span></p>
+                    <p>Сценарий: <span class="scenariy"></span></p>
+                    <p>Продюсер: <span class="prodyusser"></span></p>
+                    <p>Оператор: <span class="operator"></span></p>
+                    <p>Композитор: <span class="kompozitor"></span></p>
+                </div>
+            </div>
+            <div class="mib_right_side">
+                <div class="mrs_left_side">
+                    <p>Художник: <span class="xudojnik"></span></p>
+                    <p>Монтаж: <span class="montaj"></span></p>
+                    <p>Жанр: <span class="genre"></span></p>
+                    <p>Сборы в мире: <span class="sbori"></span></p>
+                    <p>Премьера: <span class="premyera"></span></p>
+                    <p>Возраст: <span class="vozrast"></span></p>
+                    <p>Длительность: <span class="time"></span></p>
+                </div>
+            </div>
+         </div>
+         <h1 style="color: white; display: flex; align-items: center; justify-content: center; margin-top: 100px; margin-bottom: 100px;">В ролях</h1>
+         <div class="actors"> 
+            
+         </div>
+
+    </main>
+    <footer></footer>
+    
+    <script type="module" src="/modules/movieid.js"></script>
+</body>
+</html>
