@@ -16,9 +16,9 @@ export function headerCreate(place) {
 		</nav>
 		<div class="right">
 			<button>
-				<img src="/public/icons/search.svg" alt="icon">
+				<img id="search_i" src="/public/icons/search.svg" alt="icon">
 			</button>
-			<button>Войти</button>
+			<button id="sign_up">Войти</button>
 		</div>
     `
 }
@@ -26,6 +26,7 @@ export function headerCreate(place) {
 
 export function reload(arr, place) {
     place.innerHTML = ''
+
     for (let item of arr) {
         place.innerHTML += `
             <div class="movie-card" >
