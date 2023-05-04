@@ -5,77 +5,93 @@
 	<meta charset="UTF-8" />
 	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="/scss/style.scss">
 	<link rel="stylesheet" href="/scss/header.scss">
-	<title>Vite App</title>
+	<title>Kinoarea</title>
 </head>
 
 <body>
-	<div	id="bg" class=""></div>
 	<header></header>
 	<main>
-		<div class="genres">
-			<h1>Сейчас в кино</h1>
-			<div></div>
-			<nav>
-				<p class="act_txt">Все</p>
-				<p>Боевики</p>
-				<p>Приключения</p>
-				<p>Комедии</p>
-				<p>Фантастика</p>
-				<p>Триллеры</p>
-				<p>Драма</p>
-			</nav>
-		</div>
-		<div class="movies"></div>
+		<section class="first-section">
+			<div class="genres">
+				<h1>Сейчас в кино</h1>
+				<div></div>
+				<nav>
+					<p class="act_txt">Все</p>
+					<p>Боевики</p>
+					<p>Приключения</p>
+					<p>Комедии</p>
+					<p>Фантастика</p>
+					<p>Триллеры</p>
+					<p>Драма</p>
+				</nav>
+			</div>
+			<div class="movies"></div>
+			<button data-count="not-all" class="more">Все новинки</button>
+		</section>
+
+		<section class="trailers">
+			<div class="trailers__header header">
+				<h1 class="trailers__title trailers__title_big">Новые трейлеры</h1>
+				<a href="#" class="trailers__more">
+					<p class="trailers__more-txt">Все трейлеры</p>
+					<img class="trailers__more-icon" src="/public/icons/arrow.svg" alt="icon">
+				</a>
+			</div>
+			<div class="trailers__main">
+				<div class="trailers__vid trailers__vid_big">
+					<iframe class="trailers__iframe trailers__iframe_big"
+						src="https://www.youtube.com/embed/HihYQVuH64U" frameborder="0" allowfullscreen></iframe>
+					<img class="trailers_play-icon" src="/public/icons/play.svg" alt="icon">
+				</div>
+				<div class="trailers__actions">
+					<div class="trailers__share">
+						<h1 class="trailers__title trailers__title_medium">Форсаж 9</h1>
+						<img class="trailers__share-img" src="/public/images/menu.svg" alt="image">
+						<img class="trailers__share-icon" src="/public/icons/menu_icon.svg" alt="icon">
+					</div>
+					<div class="trailers__actions-items">
+						<div class="trailers__actions-item trailers__actions-item_like">
+							<img src="/public/icons/like.svg" alt="icon" class="trailers__actions-item-icon-like">
+							<div class="trailers__actions-item-txt">3 245</div>
+						</div>
+						<div class="trailers__actions-item trailers__actions-item_dislike">
+							<img src="/public/icons/like.svg" alt="icon" class="trailers__actions-item-icon-dislike">
+							<div class="trailers__actions-item-txt">420</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="trailers__footer"></div>
+		</section>
+		<section >
+			<div class="p_actors_title">
+				<h1>Популярные персоны </h1> <span>За год За месяц За неделю</span>
+			</div>
+			<div class="popular_actors">
+				<div class="firstplace_actor pa_box"></div>
+				<div class="secondplace_actor pa_box"></div>
+				<div class="another_actors pa_box">
+
+
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="ppp_actors_title" style="margin-bottom: 10px;">
+				<h1>Ожидаемыe новинки</h1><span class="back">← Back </span> <span class="next">Next → </span>
+			</div>
+			
+			<div class="upcoming_movie"></div>
+		</section>
 	</main>
-	<div class="trailer">
-		<div class="zagolovok">
-			<h1>Новые трейлеры</h1>
-			<span>Все трейлеры -></span>
-		</div>
-		<iframe width="100%" style="padding: 20px 70px;" height="770px" class="trailer_box" src="" frameborder="0"></iframe>
-
-		<div class="mini_movie1">
-			<iframe class="movie_treyler" width="290px" style="padding: 20px 40px;" height="300px" src="" frameborder="0" ></iframe>
-			<iframe class="movie_treyler" width="290px" style="padding: 20px 40px;" height="300px" src="" frameborder="0" ></iframe>
-			<iframe class="movie_treyler" width="290px" style="padding: 20px 40px;" height="300px" src="" frameborder="0" ></iframe>
-			<iframe class="movie_treyler" width="290px" style="padding: 20px 40px;" height="300px" src="" frameborder="0" ></iframe>
-			 <iframe class="movie_treyler" width="290px" style="padding: 20px 40px;" height="300px" src="" frameborder="0" ></iframe>
-		</div>
-	</div>
-	<div class="zagolovok">
-		<h1>Популярные фильмы</h1>
-		<span>Все фильмы -></span>
-	</div>
-	<div class="popular_movies">
-
-
-	</div>
-	<div class="zagolovok">
-		<h1>Популярные актеры</h1>
-		<span>Все актеры -></span>
-	</div>
-	<div class="popular_actors">	
-
-		
-	</div>
-	<div class="zagolovok">
-		<h1>Ожидаемые новинки</h1>
-		<span>Все новинки -></span>
-
-		
-	</div>
-	<div class="ojidaemienovibki"></div>
 	<footer></footer>
 
-	<div id="searchModal">
-	</div>
-
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 	<script type="module" src="modules/main.js"></script>
-
-
-	
 </body>
 
 </html>
