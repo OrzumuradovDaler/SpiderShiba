@@ -8,6 +8,11 @@ let trailers__footer = document.querySelector('.trailers__footer')
 
 headerCreate(header)
 
+
+
+
+
+
 getData('/movie/popular')
     .then(res => {
         let item = res.data.results[Math.floor(Math.random() * res.data.results.length)]
@@ -62,7 +67,7 @@ getData(`/person/popular`)
         for (let el of arr) {
             getData(`/person/${el.id}`)
                 .then(res => {
-                    console.log(res.data);
+
                     let time_data = new Date().getFullYear()
                     let another_actors = document.querySelector('.another_actors')
                     another_actors.innerHTML += `<div class="aap_box"><div class="ab_actors_left"><h3>${el.name}</h3><p>${el.name}</p><span>${time_data - res.data.birthday.slice(0, 4)} лет</span></div><div class="ab_actors_right"><span class="aar_place">${arr.indexOf(el) + 3}-место</span></div></div><hr> `
@@ -83,7 +88,6 @@ getData(`/person/popular`)
             age.classList.add('actor_age')
             getData(`/person/${item.id}`)
                 .then(res => {
-                    console.log(res.data);
                     let time_data = new Date().getFullYear()
                     let age = document.querySelector('.actor_age')
                     age.innerHTML = `${time_data - res.data.birthday.slice(0, 4)} лет`
@@ -105,7 +109,6 @@ getData(`/person/popular`)
             getData(`/person/${item.id}`)
                 .then(res => {
                     let time_data = new Date().getFullYear()
-                    console.log(time_data);
                     let age = document.querySelector('.actor_age1')
                     age.innerHTML = `${time_data - res.data.birthday.slice(0, 4)} лет`
                 })

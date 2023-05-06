@@ -9,7 +9,6 @@ headerCreate(header)
 
 getData('/movie/popular')
     .then(res => {
-        // console.log(res);
     })
 
 
@@ -107,62 +106,107 @@ function reloadMovieCrews(arr, place) {
 
 
 getData(`/movie/${movie_id}/credits`)
-    .then(res =>{
+    .then(res => {
         let s_actors_movie = document.querySelector('.s_actors_movie')
-        let arr = res.data.cast.slice(0,10)
-        for(let item of arr){
+        let arr = res.data.cast.slice(0, 10)
+        for (let item of arr) {
             let act_cont = document.createElement('div')
             let img = document.createElement('img')
             let name = document.createElement('h4')
             let or_name = document.createElement('span')
             let character = document.createElement('p')
+            let a = document.createElement('a')
 
+            a.append(img)
             img.src = import.meta.env.VITE_BASE_IMG + item.profile_path
             name.innerHTML = item.name
             or_name.innerHTML = item.original_name
             character.innerHTML = item.character
             act_cont.classList.add('act_cont')
 
-            act_cont.append(img, name, or_name,character)
+            act_cont.append(a, name, or_name, character)
             s_actors_movie.append(act_cont)
+
+            a.onclick = () => {
+                a.href = `actors.html?id=${item.id}`
+            } 
+
         }
-    })
 
-   
+    }
 
-    getData(`/movie/${movie_id}/videos`)
-    .then(res =>{
+    
+    )
+
+
+getData(`/movie/${movie_id}/videos`)
+    .then(res => {
 
         let iframe = document.querySelector('iframe')
         iframe.src = `https://www.youtube.com/embed/${res.data.results[0].key}`
     })
 
 
-    getData(`/movie/${movie_id}/images`)
-    .then(res=>{
+getData(`/movie/${movie_id}/images`)
+    .then(res => {
         let posters = document.querySelector('.posters')
-        let arr_posters = res.data.posters.slice(0,4)
-        for(let item of arr_posters){
+        let arr_posters = res.data.posters.slice(0, 4)
+        for (let item of arr_posters) {
             let poster = document.createElement('img')
             poster.src = import.meta.env.VITE_BASE_IMG + item.file_path
             posters.append(poster)
         }
-        let screens_posters = res.data.backdrops.slice(0,8)
+        let screens_posters = res.data.backdrops.slice(0, 8)
         let screens = document.querySelector('.screens')
-        for(let item of screens_posters){
+        for (let item of screens_posters) {
             let screen = document.createElement('img')
             screen.src = import.meta.env.VITE_BASE_IMG + item.file_path
             screens.append(screen)
         }
     })
-    getData(`/movie/${movie_id}/similar`)
-    .then(res =>{
-        console.log(res.data.results);
+getData(`/movie/${movie_id}/similar`)
+    .then(res => {
     })
 
-    getData(`/movie/${movie_id}/similar`)
+getData(`/movie/${movie_id}/similar`)
     .then(res => {
         let similar_movies = document.querySelector(".similar_movies")
         let item = res.data.results[Math.floor(Math.random() * res.data.results.length)]
         reload(res.data.results.slice(0, 4), similar_movies)
     })
+
+
+
+
+
+
+
+
+
+let favorite = document.querySelector('.favourite')
+
+let located_data = JSON.parse(localStorage.getItem('favorites')) || []
+
+favorite.onclick = () => {
+    if (located_data.includes(movie_id)) {
+        located_data = located_data.filter(id => id !== movie_id)
+        favorite.classList.remove('favorited')
+    } else {
+        located_data.push(movie_id)
+        favorite.classList.add('favorited')
+    }
+    localStorage.setItem('favorites', JSON.stringify(located_data))
+}
+
+
+
+if (located_data.includes(movie_id)) {
+    favorite.classList.add('favorited')
+} else {
+    favorite.classList.remove('favorited')
+
+}
+
+
+
+

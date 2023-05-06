@@ -194,3 +194,119 @@
 
     &__footer {}
 }
+
+.favorite {}
+
+.favorited {
+    filter: invert(100%);
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+        width: 400px;
+        height: 550px;
+    }
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actors_container {
+    width: 70%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 398px;
+        height: 597px;
+
+    }
+
+    .ac_right_side {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        gap: 20px;
+
+        h2 {
+            font-weight: 900;
+            font-size: 65px;
+            line-height: 83px;
+
+            color: #FFFFFF;
+
+        }
+
+        .dddd {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 168.7%;
+            /* identical to box height, or 27px */
+
+
+            color: #4F5B7C;
+        }
+
+        .title_of_actor {
+            color: white;
+
+        }
+
+        .or_name_of_actor {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 30px;
+
+            color: #FFFFFF;
+        }
+
+        .information_actor {
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 23px;
+            text-decoration-line: underline;
+
+            color: #FFFFFF;
+
+        }
+
+        .info_about_actor {
+            gap: 20px;
+            p {
+                margin-top: 20px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+
+                color: rgba(255, 255, 255, 0.8);
+                
+            }
+        }
+
+        img {
+            width: 58.87px;
+            height: 58.87px;
+        }
+        .container_of_acc{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+    }
+}
